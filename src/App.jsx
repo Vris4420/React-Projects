@@ -1,11 +1,11 @@
-import { useState } from "react"
-import Counter from "./Counter"
-
+import { FunctionComponent } from "./FunctionComponent"
 
 function App() {
+  
 
   return(
-    <Counter />
+    <>
+    </>
   )
 }
 
