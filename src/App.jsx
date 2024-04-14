@@ -1,10 +1,12 @@
-import { FunctionComponent } from "./FunctionComponent"
+import Child from "../Child"
+
 
 function App() {
   
 
   return(
     <>
+      <Child/>
     </>
   )
 }
