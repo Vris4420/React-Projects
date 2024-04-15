@@ -1,10 +1,10 @@
-import { FunctionComponent } from "./FunctionComponent"
 
 function App() {
   
 
   return(
     <>
+    <h1>Rendering List</h1>
     </>
   )
 }
