@@ -6,11 +6,11 @@ export function FunctionComponent({ favoriteNumber }) {
     const [age, setAge] = useState(0)
 
 
-    METHOD-1
-    let jsx;
-    if(favoriteNumber != null){
-        jsx = `My favourite number is ${favoriteNumber}`
-    }
+    // METHOD-1
+    // let jsx;
+    // if(favoriteNumber != null){
+    //     jsx = `My favourite number is ${favoriteNumber}`
+    // }
 
     return (
         <div>
@@ -22,6 +22,10 @@ export function FunctionComponent({ favoriteNumber }) {
         <button onClick={() => setAge(currentAge => currentAge + 1)}>+</button>
         <br />
         <br />
+
+        {/* METHOD-2 */ }
+        {favoriteNumber != null && `My favourite number is ${favoriteNumber}`}
+
         <br/>
         My name is {name} and I am {age} years old.
         </div>
