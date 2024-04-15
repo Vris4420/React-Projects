@@ -6,6 +6,8 @@ function App() {
   return(
     <>
     <h1>Conditional Rendering</h1>
+    <br/>
+    <FunctionComponent />
     </>
   )
 }
