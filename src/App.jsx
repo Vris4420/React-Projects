@@ -7,7 +7,7 @@ function App() {
     <>
     <h1>Conditional Rendering</h1>
     <br/>
-    <FunctionComponent />
+    <FunctionComponent favoriteNumber={10}/>
     </>
   )
 }

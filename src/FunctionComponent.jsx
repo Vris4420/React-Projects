@@ -24,8 +24,11 @@ export function FunctionComponent({ favoriteNumber }) {
         <br />
 
         {/* METHOD-2 */ }
-        {favoriteNumber != null && `My favourite number is ${favoriteNumber}`}
+        {/* {favoriteNumber != null && `My favourite number is ${favoriteNumber}`} */}
 
+        {/* Ternery operators */}
+        {favoriteNumber > 5 ? `larger than 5` : `smaller than 5`}
+        
         <br/>
         My name is {name} and I am {age} years old.
         </div>
