@@ -4,54 +4,59 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f3f4f6;
-  }
-  
-  .app-container {
+}
+
+.app-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-  }
-  
-  .app-header {
+}
+
+.app-header {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .todo-list-container {
+}
+
+.todo-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-list-container {
     background: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
     padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .todo-list {
+}
+
+.todo-list {
     list-style: none;
     padding: 0;
-  }
-  
-  .list-item {
+}
+
+.list-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
     padding: 10px;
     border-bottom: 1px solid #ddd;
-  }
-  
-  .todo-checkbox {
+}
+
+.todo-checkbox {
     margin-right: 10px;
-  }
-  
-  .todo-text {
+}
+
+.todo-text {
     flex-grow: 1;
-  }
-  
-  .delete-button{
+}
+
+.delete-button {
     background-color: red;
     color: white;
     border: none;
@@ -59,9 +64,9 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-  }
+}
 
-  .add-button {
+.add-button {
     background-color: #4caf50;
     color: white;
     border: none;
@@ -69,23 +74,34 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-  }
-  
-  .add-button {
-    margin-left: 10px;
-  }
-  
-  .todo-input {
-    width: calc(100% - 90px);
+}
+
+.todo-input {
+    flex-grow: 1;
     padding: 12px;
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 10px;
-  }
-  
-  .todo-input:focus {
+}
+
+.todo-input:focus {
     outline: none;
     border-color: #4caf50;
-  }
-  
+}
+
+.list-item:hover {
+    background-color: #f9f9f9;
+}
+
+.delete-button:hover {
+    background-color: #ff3333;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+.todo-checkbox:checked ~ .todo-text {
+    text-decoration: line-through;
+}

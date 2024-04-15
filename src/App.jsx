@@ -10,8 +10,8 @@ function App() {
 
     setTodos((currentTodos) => {
       return [
-        ...currentTodos,
         { name: newTodoName, completed: false, id: crypto.randomUUID() },
+        ...currentTodos,
       ];
     });
     setNewTodoName("");
@@ -34,34 +34,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <header className="app-header">
-        <h1>My Todo List</h1>
-      </header>
-
-      <div className="todo-list-container">
-        <ul id="list" className="todo-list">
-          {todos.map((todo) => {
-            return (
-              <>
-                <li key={todo.id} className={`list-item ${todo.completed ? 'completed' : ''}`}>
-                  <label className="list-item-label">
-                    <input
-                      checked={todo.completed}
-                      type="checkbox"
-                      className="todo-checkbox"
-                      onChange={(e) => toggleTodo(todo.id, e.target.checked)}
-                    />
-                    <span className="todo-text">{todo.name}</span>
-                  </label>
-                  <button onClick={() => deleteTodo(todo.id)} className="delete-button">Delete</button>
-                </li>
-              </>
-            );
-          })}
-        </ul>
-      </div>
-
-      <div id="new-todo-form" className="todo-form">
+      <div className="todo-input-container">
         <input
           type="text"
           id="todo-input"
@@ -70,9 +43,32 @@ function App() {
           placeholder="Add a new todo..."
           className="todo-input"
         />
+        <button onClick={addNewTodo} className="add-button">
+          +
+        </button>
       </div>
-      <br/>
-        <button onClick={addNewTodo} className="add-button">+</button>
+      <div className="todo-list-container">
+        <ul id="list" className="todo-list">
+          {todos.map((todo) => {
+            return (
+              <li key={todo.id} className={`list-item ${todo.completed ? "completed" : ""}`}>
+                <label className="list-item-label">
+                  <input
+                    checked={todo.completed}
+                    type="checkbox"
+                    className="todo-checkbox"
+                    onChange={(e) => toggleTodo(todo.id, e.target.checked)}
+                  />
+                  <span className="todo-text">{todo.name}</span>
+                </label>
+                <button onClick={() => deleteTodo(todo.id)} className="delete-button">
+                  Delete
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }
